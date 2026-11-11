@@ -1,18 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { Button, Kbd, Link, TextField, InputGroup } from "@heroui/react";
+import { Kbd, Link, TextField, InputGroup } from "@heroui/react";
 import NextLink from "next/link";
 import clsx from "clsx";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
-import {
-  GithubIcon,
-  HeartFilledIcon,
-  SearchIcon,
-  Logo,
-} from "@/components/icons";
+import { SearchIcon, Logo } from "@/components/icons";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,10 +31,10 @@ export const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-40 max-h-[8vh] w-full border-b border-separator bg-background/70 backdrop-blur-lg">
-      <header className="mx-auto flex max-w-[1280px] items-center justify-between gap-4 px-6">
-        <div className="flex items-center gap-4">
+      <header className="mx-auto flex  flex-stretch items-center justify-between gap-4 px-6">
+        <div className="flex flex-row items-center gap-4">
           <NextLink className="flex items-center gap-1" href="/">
-            <Logo />
+            <Logo size={20} />
             <p className="font-bold text-inherit">GRIFFONS</p>
           </NextLink>
           <ul className="hidden lg:flex gap-4 ml-2">
